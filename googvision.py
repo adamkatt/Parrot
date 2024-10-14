@@ -1,8 +1,7 @@
 import os
 from google.cloud import vision
-from google.cloud.vision import types
 from dotenv import load_dotenv
-# Set the path to your API key JSON file
+
 # Load environment variables from a .env file
 load_dotenv()
 
