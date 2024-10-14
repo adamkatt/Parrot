@@ -13,7 +13,7 @@ while cap.isOpened():
         break
     
     # Perform object detection using YOLOv5
-    results = model(frame)dd
+    results = model(frame)
     
     # Render the detection results on the frame
     frame_with_detections = results.render()[0]
