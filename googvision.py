@@ -1,9 +1,13 @@
 import os
 from google.cloud import vision
 from google.cloud.vision import types
+from dotenv import load_dotenv
+# Set the path to your API key JSON file
+# Load environment variables from a .env file
+load_dotenv()
 
 # Set the path to your API key JSON file
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'path/to/your/api-key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
 def detect_labels(path):
     """Detects labels in the file."""
@@ -26,7 +30,7 @@ def detect_labels(path):
 
 if __name__ == '__main__':
     # Path to the image file
-    image_path = 'path/to/your/image.jpg'
+    image_path = 'data/face.png'
     
     # Detect labels in the image
     detect_labels(image_path)
