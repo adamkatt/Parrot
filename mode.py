@@ -28,4 +28,3 @@ while cap.isOpened():
 # Release resources
 cap.release()
 cv2.destroyAllWindows()
-AIzaSyD2tiRrsyU0oTS6JwhRqiXqrRi3YhxtAQw
